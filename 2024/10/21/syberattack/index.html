@@ -1,0 +1,338 @@
+<!DOCTYPE html><html lang="en" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>网络攻击技术 | Hexo</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"Enter here","blurHolder":"Search","noResult":"Data \"$0\" not found"},"code":{"codeInfo":"$0 - $1 lines","copy":"copy"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><script src="//unpkg.com/mermaid@10.5.0/dist/mermaid.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/undefined/MathJax.js"></script><script>MathJax.Hub.Config({
+ menuSettings: {
+   zoom: "None"
+ },
+ showMathMenu: false,
+ jax: ["input/TeX","output/CommonHTML"],
+ extensions: ["tex2jax.js"],
+ TeX: {
+   extensions: ["AMSmath.js","AMSsymbols.js"],
+   equationNumbers: {
+     autoNumber: "AMS"
+   }
+ },
+ tex2jax: {
+   inlineMath: [["\\(", "\\)"]],
+   displayMath: [["\\[", "\\]"]]
+ }
+});</script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.woff2") format('woff2');
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+ --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
+ --light-background: url('/img/bk.jpg');
+ --theme-encrypt-confirm: 'confirm'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/undefined/MathJax.js"></script><script>MathJax.Hub.Config({
+  menuSettings: {
+    zoom: "None"
+  },
+  showMathMenu: false,
+  jax: ["input/TeX","output/CommonHTML"],
+  extensions: ["tex2jax.js"],
+  TeX: {
+    extensions: ["AMSmath.js","AMSsymbols.js"],
+    equationNumbers: {
+      autoNumber: "AMS"
+    }
+  },
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]]
+  }
+});
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 7.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="Search" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>网络攻击技术</h1></div><hr><div id="post-content"><h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h3 id="动态链接，静态链接"><a href="#动态链接，静态链接" class="headerlink" title="动态链接，静态链接"></a>动态链接，静态链接</h3><p>静态库（ .a ）：程序在编译链接的时候把库的代码链接到可执行文件中。程序运行的时候将不再需要静态库。</p>
+<p>动态库（ .so ）：程序在运行的时候才去链接动态库的代码，多个程序共享使用库的代码。</p>
+<p>静态链接命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -o test_static test.c -static</span><br></pre></td></tr></table></figure>
+<ul>
+<li>独立性：生成的可执行文件不依赖于外部的库文件，可以在没有这些库文件的环境中独立运行。</li>
+</ul>
+<p>  PLT与GOT表均为动态链接过程中的重要部分</p>
+<p>  GOT: Global Offset Table, 全局偏移表，包含所有需要动态链接的外部函数的地址（在第一次执行后）<br>  PLT: Procedure Link Table, 过程链接表，包含调用外部函数的跳转指令（跳转到GOT表中），以及初始化外部调用指令（用于链接器动态绑定dl_runtime_resolve）</p>
+<h3 id="TEE可信执行环境"><a href="#TEE可信执行环境" class="headerlink" title="TEE可信执行环境"></a>TEE可信执行环境</h3><p>用于Android，与os分离开，程序之间不能进行未授权的访问。</p>
+<h2 id="攻击技术概念"><a href="#攻击技术概念" class="headerlink" title="攻击技术概念"></a>攻击技术概念</h2><h3 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h3><h4 id="极光"><a href="#极光" class="headerlink" title="极光"></a>极光</h4><p>APT攻击— (Advanced Persistent Threat)即高级持续性威胁，是一种周期较长、隐蔽性极强的攻击模式。 </p>
+<p>原理：访问url，解析页面过程触发漏洞，下载木马，因为是http没有被防火墙拦。</p>
+<p>漏洞三个方面：计算机系统，网络，人。</p>
+<p>goole中招。</p>
+<h4 id="wanacry"><a href="#wanacry" class="headerlink" title="wanacry"></a>wanacry</h4><p>勒索软件。</p>
+<p>历史：NSA 开发”永恒之蓝”，黑客组织入侵得到软件。ms 于17年发布补丁，两个月后大肆传播。</p>
+<h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><h4 id="近源攻击"><a href="#近源攻击" class="headerlink" title="近源攻击"></a>近源攻击</h4><p>包括物理攻击、社会工程学攻击、无线网络攻击。</p>
+<p>物理攻击：摄像头，锁。</p>
+<p>社会工程学攻击：《欺骗的艺术》。</p>
+<h2 id="网络嗅探与协议分析"><a href="#网络嗅探与协议分析" class="headerlink" title="网络嗅探与协议分析"></a>网络嗅探与协议分析</h2><p>工具：wireshark，sniffer pro</p>
+<p>网络嗅探：网络监听、窃听。</p>
+<p>作用：内网渗透、监听流量、排除程序错误。</p>
+<h3 id="链路层嗅探"><a href="#链路层嗅探" class="headerlink" title="链路层嗅探"></a>链路层嗅探</h3><p>以太网嗅探、wifi嗅探</p>
+<p>共享网络：通过Hub连接</p>
+<p>通过调整混杂模式即可。</p>
+<p>交换式网络：通过Switch连接</p>
+<h4 id="MAC地址泛洪"><a href="#MAC地址泛洪" class="headerlink" title="MAC地址泛洪"></a>MAC地址泛洪</h4><p>导致映射表溢出转换为共享式</p>
+<h4 id="MAC欺骗"><a href="#MAC欺骗" class="headerlink" title="MAC欺骗"></a>MAC欺骗</h4><p>欺骗交换机。</p>
+<h4 id="ARP欺骗"><a href="#ARP欺骗" class="headerlink" title="ARP欺骗"></a>ARP欺骗</h4><p>欺骗PC或路由器。</p>
+<h3 id="WIFI"><a href="#WIFI" class="headerlink" title="WIFI"></a>WIFI</h3><h3 id="网络嗅探检测"><a href="#网络嗅探检测" class="headerlink" title="网络嗅探检测"></a>网络嗅探检测</h3><h4 id="操作系统特性"><a href="#操作系统特性" class="headerlink" title="操作系统特性"></a>操作系统特性</h4><p>发送 icmp echo （ping）看是否回应（混杂模式下会回应）。</p>
+<h4 id="根据网络和主机性能"><a href="#根据网络和主机性能" class="headerlink" title="根据网络和主机性能"></a>根据网络和主机性能</h4><p>检测响应时间。</p>
+<h3 id="网络嗅探防御"><a href="#网络嗅探防御" class="headerlink" title="网络嗅探防御"></a>网络嗅探防御</h3><h4 id="安全的网络拓扑"><a href="#安全的网络拓扑" class="headerlink" title="安全的网络拓扑"></a>安全的网络拓扑</h4><h4 id="加密"><a href="#加密" class="headerlink" title="加密"></a>加密</h4><h4 id="静态mac映射"><a href="#静态mac映射" class="headerlink" title="静态mac映射"></a>静态mac映射</h4><h4 id="集中位置点防御"><a href="#集中位置点防御" class="headerlink" title="集中位置点防御"></a>集中位置点防御</h4><h3 id="wireshark使用"><a href="#wireshark使用" class="headerlink" title="wireshark使用"></a>wireshark使用</h3><h4 id="过滤规则"><a href="#过滤规则" class="headerlink" title="过滤规则"></a>过滤规则</h4><p>例子，ip.addr == 127.0.0.1  and http</p>
+<p>实现ip地址与协议过滤</p>
+<h4 id="查看cookie与session"><a href="#查看cookie与session" class="headerlink" title="查看cookie与session"></a>查看cookie与session</h4><p>cookie:</p>
+<p>1.cookie用于辨别身份，存放在本地。</p>
+<p>2.cookie即可以保存在内存中也可以保存在硬盘中。</p>
+<p>3.expire值指定了cookie的生存周期。</p>
+<p>session:</p>
+<p>1.session用于传递数据，存放在服务器。</p>
+<p>2.用于会话控制。 Session 对象存储特定用户会话所需的属性及配置信息。 </p>
+<p>jwt</p>
+<p>token</p>
+<h2 id="信息搜集"><a href="#信息搜集" class="headerlink" title="信息搜集"></a>信息搜集</h2><h3 id="网络踩点"><a href="#网络踩点" class="headerlink" title="网络踩点"></a>网络踩点</h3><p>目标组织与个人。可直接访问的ip，寻找跳板。</p>
+<p>入侵检测系统，网络结构。</p>
+<p><strong>—技术手段—</strong></p>
+<h4 id="dns与ip查询"><a href="#dns与ip查询" class="headerlink" title="dns与ip查询"></a>dns与ip查询</h4><p>ICANN 因特网技术协调机构 </p>
+<p>百度被黑（dns服务器出问题）</p>
+<p>DNS域名解析过程</p>
+<p>dns查询:nslookup/dig （也可以反向查 nslookup -qt=ptr ip [dnsserver]）</p>
+<p>ip 查询:whois</p>
+<p>IP2Location -地理信息查询 ：google earth，google map</p>
+<p>GPS 定位</p>
+<h4 id="web信息搜索与挖掘"><a href="#web信息搜索与挖掘" class="headerlink" title="web信息搜索与挖掘"></a>web信息搜索与挖掘</h4><p>google hacking</p>
+<p>远程桌面web连接</p>
+<p>johnny long,athena</p>
+<p>公共信息服务：深度伪造</p>
+<p>社交网络挖掘</p>
+<p><strong>google hacking</strong> 用法：</p>
+<p><u><strong>基础用法</strong></u></p>
+<p>1.A -B     搜索不出现B关键字</p>
+<p>2.”A”       强制结果出现关键字A且不会进行切割</p>
+<p>3.site:A   指定搜索A域名下的网站</p>
+<p>4.filetype:pdf   文件类型 </p>
+<p>5.inurl:.php?id=       inurl: /admin/login.php       网站url出现关键字</p>
+<p>7.intitle:keyword  搜索标题存在特定关键字的网页 </p>
+<p>8.intitle:“index” of password       搜寻目录索引信息 </p>
+<p>9.intext:keyword   搜索正文存在特定关键字的网页 </p>
+<p>10.site:baidu.com 搜索和目标网站有联系的URL  （这个是域名相关，单纯的inurl是出现关键字，可能不是一个域名）</p>
+<p><u><strong>进阶用法</strong></u></p>
+<p> intext:to parent directory </p>
+<p> Uncode目录遍历漏洞 </p>
+<h4 id="网络拓扑侦察"><a href="#网络拓扑侦察" class="headerlink" title="网络拓扑侦察"></a>网络拓扑侦察</h4><p>路由追踪：tracert A</p>
+<h3 id="网络扫描"><a href="#网络扫描" class="headerlink" title="网络扫描"></a>网络扫描</h3><h4 id="扫描分类"><a href="#扫描分类" class="headerlink" title="扫描分类"></a><strong>扫描分类</strong></h4><p>主机扫描：找出网段内活跃的主机</p>
+<p>端口扫描：找出主机上开发的网络服务</p>
+<p>操作系统/网络服务辨识：识别主机的操作系统与开发的网络服务类型</p>
+<p>漏洞扫描：找出主机/网络服务上的安全漏洞</p>
+<h4 id="主机扫描"><a href="#主机扫描" class="headerlink" title="主机扫描"></a>主机扫描</h4><p><strong>Ping （主机扫描）</strong></p>
+<p>ICMP Ping</p>
+<p>ACK Ping</p>
+<p>SYN Ping</p>
+<p>UDP Ping</p>
+<p><strong>Ping扫射</strong></p>
+<p>Nmap ：-sp 缺省执行</p>
+<p>fping，hping2</p>
+<p>superscan</p>
+<p><strong>入侵监测</strong></p>
+<p>Snort，Scanlogd</p>
+<h4 id="端口扫描"><a href="#端口扫描" class="headerlink" title="端口扫描"></a>端口扫描</h4><p>连接TCP/UDP端口，确定哪些服务在运行或者监听。</p>
+<p><strong>TCP端口扫描</strong>：看是否直接恢复rst判断是否开放</p>
+<p>TCP连接扫描 -sT</p>
+<p>SYN扫描：半开扫描 -sS</p>
+<p><strong>隐蔽端口扫描</strong></p>
+<p>FTP弹射扫描</p>
+<p>UDP端口扫描：UDP REP-&gt;  ICMP端口不可达（端口没有开放）</p>
+<p><strong>nmap重点掌握</strong></p>
+<h4 id="系统探查"><a href="#系统探查" class="headerlink" title="系统探查"></a>系统探查</h4><p>为攻击做准备</p>
+<p>主动与被动探测技术</p>
+<p><strong>主动协议栈指纹鉴别</strong></p>
+<p>Fyodor，Phrack</p>
+<p>指纹：FIN,TCP初始窗口大小等</p>
+<p><strong>被动识别</strong></p>
+<p>p0f</p>
+<h4 id="漏洞扫描"><a href="#漏洞扫描" class="headerlink" title="漏洞扫描"></a>漏洞扫描</h4><p>漏洞：软件、硬件、策略的安全缺陷</p>
+<p>扫描已经公布的漏洞。</p>
+<p>不可避免的原因：1.系统设计缺陷（TCP/IP,Internet)2.代码量膨胀。3.软件缺陷</p>
+<p><strong>漏洞扫描技术</strong>：</p>
+<p>1.渗透测试</p>
+<p>2.漏扫软件 ：ISS, SATAN ,NESSUS, OPENVAS  ,Xscan </p>
+<p><strong>漏洞扫描防范</strong>：先扫描修补漏洞，FDCC 补丁自动管理，检测snort。</p>
+<h3 id="网络查点"><a href="#网络查点" class="headerlink" title="网络查点"></a>网络查点</h3><p>在踩点与扫描之后针对性探测安全问题。</p>
+<p>网络服务旗标攫取：连接网站</p>
+<p>SMTP,    NetBIOS</p>
+<p>SMB 打印机 ，匿名</p>
+<p>IPC$</p>
+<p>盘符共享</p>
+<h2 id="网络攻击技术"><a href="#网络攻击技术" class="headerlink" title="网络攻击技术"></a>网络攻击技术</h2><h3 id="Dos攻击"><a href="#Dos攻击" class="headerlink" title="Dos攻击"></a>Dos攻击</h3><p>定义：利用网络协议、软件的漏洞使目标计算机资源耗尽。</p>
+<p>攻击者发送带有虚假地址的报文，使服务器去访问虚假的地址，但是得不到回复，从而无法释放资源（一直等待）。</p>
+<h4 id="攻击类型"><a href="#攻击类型" class="headerlink" title="攻击类型"></a>攻击类型</h4><p>1.消耗资源</p>
+<p>消耗网络带宽：大量报文占用网络带宽。</p>
+<p>消耗磁盘空间：让用户磁盘内充满垃圾信息。</p>
+<p>消耗cpu和内存资源：造成系统性能下降或崩溃。</p>
+<p>2.配置修改</p>
+<p>改变路由信息：Windows NT注册表，UNIX /etc 下文件（一个点被控制，整个区域受影响）。</p>
+<p>3.系统缺陷型</p>
+<p>通过故意输错密码来限制用户使用时间。</p>
+<p>4.物理破坏</p>
+<h4 id="攻击形式"><a href="#攻击形式" class="headerlink" title="攻击形式"></a>攻击形式</h4><h4 id="分类："><a href="#分类：" class="headerlink" title="分类："></a>分类：</h4><h5 id="SYN-Flood"><a href="#SYN-Flood" class="headerlink" title="SYN Flood"></a>SYN Flood</h5><p>发送SYN 不进行确认，服务器进行等待。</p>
+<p>通常用IP欺骗技术（攻击来源无法定位，无法确定合不合法）。对Windows NT攻击很有效。</p>
+<p>防御：过滤ip</p>
+<h5 id="死ping"><a href="#死ping" class="headerlink" title="死ping"></a>死ping</h5><p>缓冲区大小64KB, ICMP 超过64KB将缓冲区溢出。</p>
+<h5 id="泪滴"><a href="#泪滴" class="headerlink" title="泪滴"></a>泪滴</h5><p>利用协议漏洞</p>
+<p>防御：服务器用最新的服务包，先重组再转发。</p>
+<h5 id="Land攻击"><a href="#Land攻击" class="headerlink" title="Land攻击"></a>Land攻击</h5><p>SYN包，源地址和目的地址是同一个服务器。</p>
+<p>自己和自己建立TCP连接。</p>
+<h5 id="smurf攻击"><a href="#smurf攻击" class="headerlink" title="smurf攻击"></a>smurf攻击</h5><p>采用ICMP攻击</p>
+<p>（a）找出网络上回复ICMP的路由器。</p>
+<p>（b）向路由器广播地址发出讯息，路由器会广播到每一台设备。</p>
+<p>（c）这些设备马上回应，占用网络带宽。</p>
+<h5 id="Fraggle攻击"><a href="#Fraggle攻击" class="headerlink" title="Fraggle攻击"></a>Fraggle攻击</h5><p>与smurf类似，用UDP Echo</p>
+<p>防御：过滤UDP应答消息</p>
+<h5 id="炸弹攻击"><a href="#炸弹攻击" class="headerlink" title="炸弹攻击"></a>炸弹攻击</h5><p>对目标机发送大量垃圾信息。</p>
+<h5 id="DDOS攻击"><a href="#DDOS攻击" class="headerlink" title="DDOS攻击"></a><strong>DDOS攻击</strong></h5><p>分布攻击</p>
+<p>攻击端，主控端，代理端。</p>
+<p>攻击端：攻击者的主机。</p>
+<p>主控端：攻击者直接控制的主机。</p>
+<p>代理端：攻击者间接控制的主机。</p>
+<p>僵尸网络：IRC Bot ，Command &amp; Control Server</p>
+<p>IRC Bot：网络聊天室协议</p>
+<p>防御僵尸网络：IDS（指纹信息),行为监测法，蜜罐捕获法</p>
+<h4 id="防御"><a href="#防御" class="headerlink" title="防御"></a>防御</h4><p>封ip（源），增加带宽。</p>
+<h3 id="缓冲区溢出"><a href="#缓冲区溢出" class="headerlink" title="缓冲区溢出"></a>缓冲区溢出</h3><p>栈，堆（new，delete），自由存储区（malloc，free），全局变量区，常量区。</p>
+<p>详见win安全。</p>
+<h3 id="网站攻击"><a href="#网站攻击" class="headerlink" title="网站攻击"></a>网站攻击</h3><h4 id="基础知识-1"><a href="#基础知识-1" class="headerlink" title="基础知识"></a>基础知识</h4><p>HTML静态标记语言，能够生成表单脚本，动态页面</p>
+<p>动态页面：CGI</p>
+<p>脚本语言:ASP,PHP,JSP</p>
+<p>插件：ActiveX，PPAPI,NPAPI</p>
+<p>前端通过AJAX发送请求，js处理返回的数据</p>
+<h4 id="手工代码审查"><a href="#手工代码审查" class="headerlink" title="手工代码审查"></a>手工代码审查</h4><p>静态与动态页面代码，参数名称、类型、含义，注释，表单隐藏字段。</p>
+<p>表单提交方法，脚本，自动完成标记，口令字段。</p>
+<h4 id="自动下载与镜像"><a href="#自动下载与镜像" class="headerlink" title="自动下载与镜像"></a>自动下载与镜像</h4><p>curl/wget/Lynx</p>
+<p>Libcurl</p>
+<h4 id="Google-Hacking"><a href="#Google-Hacking" class="headerlink" title="Google Hacking"></a>Google Hacking</h4><h4 id="攻击web服务器软件"><a href="#攻击web服务器软件" class="headerlink" title="攻击web服务器软件"></a>攻击web服务器软件</h4><p>MS:WinServer/IIS/SQL Server/ASP</p>
+<p>LINUX:Apache/Tomcat/PHP</p>
+<p>IIS/MS SQL 攻击软件:红色代码，尼姆达</p>
+<p>目录遍历功能</p>
+<h4 id="组件漏洞"><a href="#组件漏洞" class="headerlink" title="组件漏洞"></a>组件漏洞</h4><p>Spring，Log4j，WordPress，ThinkPHP</p>
+<h4 id="敏感信息泄露"><a href="#敏感信息泄露" class="headerlink" title="敏感信息泄露"></a>敏感信息泄露</h4><p>GF,BM</p>
+<p>Web服务器目录遍历</p>
+<p>Upload，Incoming转文件漏洞</p>
+<h3 id="恶意代码攻击"><a href="#恶意代码攻击" class="headerlink" title="恶意代码攻击"></a>恶意代码攻击</h3><p>CNcert</p>
+<p>CIH病毒： 98年 ，危险程度最大。覆盖硬盘与BIOS芯片。</p>
+<p>Melissa病毒：Word宏脚本病毒。</p>
+<p>ILOVEYOU：蠕虫。</p>
+<p>红色代码：蠕虫。</p>
+<p>修改注册表：</p>
+<p>注册表启动项</p>
+<p>修改配置文件</p>
+<h3 id="网络攻击"><a href="#网络攻击" class="headerlink" title="网络攻击"></a>网络攻击</h3><p>震荡波：MS04-001漏洞攻击</p>
+<h4 id="arp-欺骗"><a href="#arp-欺骗" class="headerlink" title="arp 欺骗"></a>arp 欺骗</h4><h4 id="rootkit-隐藏进程"><a href="#rootkit-隐藏进程" class="headerlink" title="rootkit 隐藏进程"></a>rootkit 隐藏进程</h4><p>应用级，硬件级，内核级。</p>
+<p>隐藏文件：strace ls :sys_getdents64 ,readdir,ext2</p>
+<p>隐藏进程：proc</p>
+<p>内核后门</p>
+<p>嗅探工具</p>
+<p>密码记录</p>
+<p>lkm注射</p>
+<p>模块摘除</p>
+<p>拦截中断</p>
+<p>端口反弹</p>
+<p>劫持系统调用</p>
+<h4 id="木马"><a href="#木马" class="headerlink" title="木马"></a>木马</h4><h5 id="木马伪装"><a href="#木马伪装" class="headerlink" title="木马伪装"></a>木马伪装</h5><p>图片，游戏，捆绑程序，扩展组件(dll,ocx).</p>
+<h5 id="存放"><a href="#存放" class="headerlink" title="存放"></a>存放</h5><p>windows\system 靠近系统文件</p>
+<h5 id="木马编程"><a href="#木马编程" class="headerlink" title="木马编程"></a>木马编程</h5><p>修改注册表，调用win32 api，多线程，后台监控，定时触发器，socket编程</p>
+<h5 id="木马植入"><a href="#木马植入" class="headerlink" title="木马植入"></a>木马植入</h5><p>攻击植入（获得服务器控制权后植入），漏洞植入，伪装欺骗.</p>
+<h5 id="QAZ-木马植入"><a href="#QAZ-木马植入" class="headerlink" title="QAZ 木马植入"></a>QAZ 木马植入</h5><p>将notepad.exe 修改为 note.com,然后生成新的notepad.exe（带木马).利用共享磁盘在局域网传播.</p>
+<h5 id="启动方式"><a href="#启动方式" class="headerlink" title="启动方式"></a>启动方式</h5><p>自动启动(注册表，win.ini,system.ini），捆绑启动，修改文件关联(让木马打开.txt 而非 notepad.exe)</p>
+<p>屏幕保护程序</p>
+<h2 id="病毒处理"><a href="#病毒处理" class="headerlink" title="病毒处理"></a>病毒处理</h2><h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>保护模式运行，删除启动项，服务</p>
+<h3 id="识别"><a href="#识别" class="headerlink" title="识别"></a>识别</h3><p>加载项：winlogon</p>
+<p>判断是否有完整的版本信息</p>
+<p>取消隐藏</p>
+<h3 id="修复"><a href="#修复" class="headerlink" title="修复"></a>修复</h3><p>host文件</p>
+<p>临时目录</p>
+<h3 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h3><p>HijackThis</p>
+<p>Process Explorer</p>
+<p>IceSword</p>
+<p>Lspfix&amp;Winsockfix</p>
+<p>SIC 3.0</p>
+<p>Autoruns</p>
+<p>TCPView</p>
+<p>Regmon,InstallRite</p>
+<p>Filemon,InstallRite</p>
+<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><p>灰鸽子</p>
+<p>传奇木马</p>
+<p>WORM_LOVGATE.AE</p>
+<p>PE_LOOKED.ID-0</p>
+<h2 id="身份认证与口令"><a href="#身份认证与口令" class="headerlink" title="身份认证与口令"></a>身份认证与口令</h2><p>主动口令攻击</p>
+<p>pydictor字典</p>
+<p>LAN Manager</p>
+<p>口令存储:SAM数据库</p>
+<h2 id="网络协议安全"><a href="#网络协议安全" class="headerlink" title="网络协议安全"></a>网络协议安全</h2><h3 id="网络安全属性"><a href="#网络安全属性" class="headerlink" title="网络安全属性"></a>网络安全属性</h3><p>CIA属性:机密性，完整性，可用性</p>
+<p>附加属性:真实性，不可抵赖性（可审查性）</p>
+<p>米特尼克，克利夫特.</p>
+<h3 id="网络协议安全攻击"><a href="#网络协议安全攻击" class="headerlink" title="网络协议安全攻击"></a>网络协议安全攻击</h3><p><strong>Sniffer </strong></p>
+<p>Raw Socket</p>
+<p>Libnet</p>
+<p>scapy</p>
+<p><strong>Netwox/Netwag</strong></p>
+<h4 id="盲攻击"><a href="#盲攻击" class="headerlink" title="盲攻击"></a>盲攻击</h4><p>A,B,C    C 信任B</p>
+<p>A 先dos攻击让B瘫痪，再冒充B与C建立连接 (猜测ISN).</p>
+<p>先建立连接过渡.</p>
+<p>放大攻击</p>
+<p>arp欺骗</p>
+<h4 id="RST攻击"><a href="#RST攻击" class="headerlink" title="RST攻击"></a>RST攻击</h4><p>阻断连接(GFW)</p>
+<p>中间人发送RST强制断掉链接，需要注意IP,端口号匹配，序号在滑动窗口内.</p>
+<p>西厢计划</p>
+<h4 id="on-PATH-DNS-欺骗"><a href="#on-PATH-DNS-欺骗" class="headerlink" title="on-PATH DNS 欺骗"></a>on-PATH DNS 欺骗</h4><p>需要响应更快</p>
+<h4 id="TCP-SYN-FLOOD"><a href="#TCP-SYN-FLOOD" class="headerlink" title="TCP SYN FLOOD"></a>TCP SYN FLOOD</h4><p>dos攻击</p>
+<h2 id="无线网安全"><a href="#无线网安全" class="headerlink" title="无线网安全"></a>无线网安全</h2><h3 id="种类"><a href="#种类" class="headerlink" title="种类"></a>种类</h3><p>蓝牙协议：802.15.1</p>
+<p>WiMax  : 802.16.1</p>
+<p>cellular network 2g3g</p>
+<p>卫星网</p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2024/10/21/win/">← Next win系统安全</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2024/10/18/hello-world/">Hello World Prev →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="To Top" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="To Catalog">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="Change Theme"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="Logo"></a><h1 id="Dr"><a href="/">John Doe</a></h1><div id="description"><p></p></div></div><div id="aside-block"><div id="toc-div"><h1>Catalog</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">1.</span> <span class="toc-text">基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E9%93%BE%E6%8E%A5%EF%BC%8C%E9%9D%99%E6%80%81%E9%93%BE%E6%8E%A5"><span class="toc-number">1.1.</span> <span class="toc-text">动态链接，静态链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TEE%E5%8F%AF%E4%BF%A1%E6%89%A7%E8%A1%8C%E7%8E%AF%E5%A2%83"><span class="toc-number">1.2.</span> <span class="toc-text">TEE可信执行环境</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%BB%E5%87%BB%E6%8A%80%E6%9C%AF%E6%A6%82%E5%BF%B5"><span class="toc-number">2.</span> <span class="toc-text">攻击技术概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BE%E4%BE%8B"><span class="toc-number">2.1.</span> <span class="toc-text">举例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9E%81%E5%85%89"><span class="toc-number">2.1.1.</span> <span class="toc-text">极光</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#wanacry"><span class="toc-number">2.1.2.</span> <span class="toc-text">wanacry</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E7%B1%BB"><span class="toc-number">2.2.</span> <span class="toc-text">分类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%91%E6%BA%90%E6%94%BB%E5%87%BB"><span class="toc-number">2.2.1.</span> <span class="toc-text">近源攻击</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%97%85%E6%8E%A2%E4%B8%8E%E5%8D%8F%E8%AE%AE%E5%88%86%E6%9E%90"><span class="toc-number">3.</span> <span class="toc-text">网络嗅探与协议分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%93%BE%E8%B7%AF%E5%B1%82%E5%97%85%E6%8E%A2"><span class="toc-number">3.1.</span> <span class="toc-text">链路层嗅探</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#MAC%E5%9C%B0%E5%9D%80%E6%B3%9B%E6%B4%AA"><span class="toc-number">3.1.1.</span> <span class="toc-text">MAC地址泛洪</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MAC%E6%AC%BA%E9%AA%97"><span class="toc-number">3.1.2.</span> <span class="toc-text">MAC欺骗</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ARP%E6%AC%BA%E9%AA%97"><span class="toc-number">3.1.3.</span> <span class="toc-text">ARP欺骗</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WIFI"><span class="toc-number">3.2.</span> <span class="toc-text">WIFI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%97%85%E6%8E%A2%E6%A3%80%E6%B5%8B"><span class="toc-number">3.3.</span> <span class="toc-text">网络嗅探检测</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%89%B9%E6%80%A7"><span class="toc-number">3.3.1.</span> <span class="toc-text">操作系统特性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%B9%E6%8D%AE%E7%BD%91%E7%BB%9C%E5%92%8C%E4%B8%BB%E6%9C%BA%E6%80%A7%E8%83%BD"><span class="toc-number">3.3.2.</span> <span class="toc-text">根据网络和主机性能</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%97%85%E6%8E%A2%E9%98%B2%E5%BE%A1"><span class="toc-number">3.4.</span> <span class="toc-text">网络嗅探防御</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E5%85%A8%E7%9A%84%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91"><span class="toc-number">3.4.1.</span> <span class="toc-text">安全的网络拓扑</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A0%E5%AF%86"><span class="toc-number">3.4.2.</span> <span class="toc-text">加密</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%99%E6%80%81mac%E6%98%A0%E5%B0%84"><span class="toc-number">3.4.3.</span> <span class="toc-text">静态mac映射</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9B%86%E4%B8%AD%E4%BD%8D%E7%BD%AE%E7%82%B9%E9%98%B2%E5%BE%A1"><span class="toc-number">3.4.4.</span> <span class="toc-text">集中位置点防御</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#wireshark%E4%BD%BF%E7%94%A8"><span class="toc-number">3.5.</span> <span class="toc-text">wireshark使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%87%E6%BB%A4%E8%A7%84%E5%88%99"><span class="toc-number">3.5.1.</span> <span class="toc-text">过滤规则</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8Bcookie%E4%B8%8Esession"><span class="toc-number">3.5.2.</span> <span class="toc-text">查看cookie与session</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E6%90%9C%E9%9B%86"><span class="toc-number">4.</span> <span class="toc-text">信息搜集</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E8%B8%A9%E7%82%B9"><span class="toc-number">4.1.</span> <span class="toc-text">网络踩点</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#dns%E4%B8%8Eip%E6%9F%A5%E8%AF%A2"><span class="toc-number">4.1.1.</span> <span class="toc-text">dns与ip查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#web%E4%BF%A1%E6%81%AF%E6%90%9C%E7%B4%A2%E4%B8%8E%E6%8C%96%E6%8E%98"><span class="toc-number">4.1.2.</span> <span class="toc-text">web信息搜索与挖掘</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91%E4%BE%A6%E5%AF%9F"><span class="toc-number">4.1.3.</span> <span class="toc-text">网络拓扑侦察</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E6%89%AB%E6%8F%8F"><span class="toc-number">4.2.</span> <span class="toc-text">网络扫描</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%AB%E6%8F%8F%E5%88%86%E7%B1%BB"><span class="toc-number">4.2.1.</span> <span class="toc-text">扫描分类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BB%E6%9C%BA%E6%89%AB%E6%8F%8F"><span class="toc-number">4.2.2.</span> <span class="toc-text">主机扫描</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F"><span class="toc-number">4.2.3.</span> <span class="toc-text">端口扫描</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E6%8E%A2%E6%9F%A5"><span class="toc-number">4.2.4.</span> <span class="toc-text">系统探查</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F"><span class="toc-number">4.2.5.</span> <span class="toc-text">漏洞扫描</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E6%9F%A5%E7%82%B9"><span class="toc-number">4.3.</span> <span class="toc-text">网络查点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E6%94%BB%E5%87%BB%E6%8A%80%E6%9C%AF"><span class="toc-number">5.</span> <span class="toc-text">网络攻击技术</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Dos%E6%94%BB%E5%87%BB"><span class="toc-number">5.1.</span> <span class="toc-text">Dos攻击</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%94%BB%E5%87%BB%E7%B1%BB%E5%9E%8B"><span class="toc-number">5.1.1.</span> <span class="toc-text">攻击类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%94%BB%E5%87%BB%E5%BD%A2%E5%BC%8F"><span class="toc-number">5.1.2.</span> <span class="toc-text">攻击形式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E7%B1%BB%EF%BC%9A"><span class="toc-number">5.1.3.</span> <span class="toc-text">分类：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#SYN-Flood"><span class="toc-number">5.1.3.1.</span> <span class="toc-text">SYN Flood</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%AD%BBping"><span class="toc-number">5.1.3.2.</span> <span class="toc-text">死ping</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B3%AA%E6%BB%B4"><span class="toc-number">5.1.3.3.</span> <span class="toc-text">泪滴</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Land%E6%94%BB%E5%87%BB"><span class="toc-number">5.1.3.4.</span> <span class="toc-text">Land攻击</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#smurf%E6%94%BB%E5%87%BB"><span class="toc-number">5.1.3.5.</span> <span class="toc-text">smurf攻击</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Fraggle%E6%94%BB%E5%87%BB"><span class="toc-number">5.1.3.6.</span> <span class="toc-text">Fraggle攻击</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%82%B8%E5%BC%B9%E6%94%BB%E5%87%BB"><span class="toc-number">5.1.3.7.</span> <span class="toc-text">炸弹攻击</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#DDOS%E6%94%BB%E5%87%BB"><span class="toc-number">5.1.3.8.</span> <span class="toc-text">DDOS攻击</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%98%B2%E5%BE%A1"><span class="toc-number">5.1.4.</span> <span class="toc-text">防御</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA"><span class="toc-number">5.2.</span> <span class="toc-text">缓冲区溢出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%AB%99%E6%94%BB%E5%87%BB"><span class="toc-number">5.3.</span> <span class="toc-text">网站攻击</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-1"><span class="toc-number">5.3.1.</span> <span class="toc-text">基础知识</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%8B%E5%B7%A5%E4%BB%A3%E7%A0%81%E5%AE%A1%E6%9F%A5"><span class="toc-number">5.3.2.</span> <span class="toc-text">手工代码审查</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E4%B8%8B%E8%BD%BD%E4%B8%8E%E9%95%9C%E5%83%8F"><span class="toc-number">5.3.3.</span> <span class="toc-text">自动下载与镜像</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Google-Hacking"><span class="toc-number">5.3.4.</span> <span class="toc-text">Google Hacking</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%94%BB%E5%87%BBweb%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BD%AF%E4%BB%B6"><span class="toc-number">5.3.5.</span> <span class="toc-text">攻击web服务器软件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%84%E4%BB%B6%E6%BC%8F%E6%B4%9E"><span class="toc-number">5.3.6.</span> <span class="toc-text">组件漏洞</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2"><span class="toc-number">5.3.7.</span> <span class="toc-text">敏感信息泄露</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%81%B6%E6%84%8F%E4%BB%A3%E7%A0%81%E6%94%BB%E5%87%BB"><span class="toc-number">5.4.</span> <span class="toc-text">恶意代码攻击</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E6%94%BB%E5%87%BB"><span class="toc-number">5.5.</span> <span class="toc-text">网络攻击</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#arp-%E6%AC%BA%E9%AA%97"><span class="toc-number">5.5.1.</span> <span class="toc-text">arp 欺骗</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#rootkit-%E9%9A%90%E8%97%8F%E8%BF%9B%E7%A8%8B"><span class="toc-number">5.5.2.</span> <span class="toc-text">rootkit 隐藏进程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%A8%E9%A9%AC"><span class="toc-number">5.5.3.</span> <span class="toc-text">木马</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%9C%A8%E9%A9%AC%E4%BC%AA%E8%A3%85"><span class="toc-number">5.5.3.1.</span> <span class="toc-text">木马伪装</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AD%98%E6%94%BE"><span class="toc-number">5.5.3.2.</span> <span class="toc-text">存放</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%9C%A8%E9%A9%AC%E7%BC%96%E7%A8%8B"><span class="toc-number">5.5.3.3.</span> <span class="toc-text">木马编程</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%9C%A8%E9%A9%AC%E6%A4%8D%E5%85%A5"><span class="toc-number">5.5.3.4.</span> <span class="toc-text">木马植入</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#QAZ-%E6%9C%A8%E9%A9%AC%E6%A4%8D%E5%85%A5"><span class="toc-number">5.5.3.5.</span> <span class="toc-text">QAZ 木马植入</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E6%96%B9%E5%BC%8F"><span class="toc-number">5.5.3.6.</span> <span class="toc-text">启动方式</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%97%85%E6%AF%92%E5%A4%84%E7%90%86"><span class="toc-number">6.</span> <span class="toc-text">病毒处理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95"><span class="toc-number">6.1.</span> <span class="toc-text">测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%86%E5%88%AB"><span class="toc-number">6.2.</span> <span class="toc-text">识别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E5%A4%8D"><span class="toc-number">6.3.</span> <span class="toc-text">修复</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7"><span class="toc-number">6.4.</span> <span class="toc-text">工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B%E5%AD%90"><span class="toc-number">6.5.</span> <span class="toc-text">例子</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E4%B8%8E%E5%8F%A3%E4%BB%A4"><span class="toc-number">7.</span> <span class="toc-text">身份认证与口令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE%E5%AE%89%E5%85%A8"><span class="toc-number">8.</span> <span class="toc-text">网络协议安全</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%B1%9E%E6%80%A7"><span class="toc-number">8.1.</span> <span class="toc-text">网络安全属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE%E5%AE%89%E5%85%A8%E6%94%BB%E5%87%BB"><span class="toc-number">8.2.</span> <span class="toc-text">网络协议安全攻击</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%B2%E6%94%BB%E5%87%BB"><span class="toc-number">8.2.1.</span> <span class="toc-text">盲攻击</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#RST%E6%94%BB%E5%87%BB"><span class="toc-number">8.2.2.</span> <span class="toc-text">RST攻击</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#on-PATH-DNS-%E6%AC%BA%E9%AA%97"><span class="toc-number">8.2.3.</span> <span class="toc-text">on-PATH DNS 欺骗</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#TCP-SYN-FLOOD"><span class="toc-number">8.2.4.</span> <span class="toc-text">TCP SYN FLOOD</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A0%E7%BA%BF%E7%BD%91%E5%AE%89%E5%85%A8"><span class="toc-number">9.</span> <span class="toc-text">无线网安全</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A7%8D%E7%B1%BB"><span class="toc-number">9.1.</span> <span class="toc-text">种类</span></a></li></ol></li></ol></div></div><footer><nobr>Published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>
